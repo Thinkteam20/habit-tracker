@@ -1,16 +1,14 @@
-import React, { Component, createRef } from "react";
+import React, { PureComponent, createRef } from "react";
 
-export default class Input extends Component {
+export default class Input extends PureComponent {
     // Ref
-    formRef = createRef();
+    formRef = React.createRef();
     inputRef = React.createRef();
 
     handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(this.inputRef.current.value);
         const name = this.inputRef.current.value;
         name && this.props.onAdd(name);
-        // this.inputRef.current.value = "";
         this.formRef.current.reset();
     };
 
@@ -39,14 +37,12 @@ export default class Input extends Component {
                 onSubmit={this.handleSubmit}
             >
                 <input
+                    ref={this.inputRef}
                     type='text'
                     // onChange={this.handleChange}
-                    ref={this.inputRef}
                     placeholder='please enter your habit'
                 />
-                <button type='submit' className='input-button'>
-                    ADD
-                </button>
+                <button className='input-button'>ADD</button>
             </form>
         );
     }

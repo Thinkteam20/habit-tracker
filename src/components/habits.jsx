@@ -50,6 +50,7 @@ export default class Habits extends Component {
                         <Habit
                             key={habit.id}
                             habit={habit}
+                            count={habit.count}
                             onIncrement={this.handleIncrement}
                             onDecrement={this.handleDecrement}
                             onDelete={this.handleDelete}

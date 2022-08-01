@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-export default class Habit extends Component {
+export default class Habit extends PureComponent {
     // ** 부모로부터 받은 state를 보여주기만하는 클라스 컴포넌트!*****
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
@@ -15,9 +15,9 @@ export default class Habit extends Component {
     };
 
     render() {
-        console.log("habit");
         const { name, count } = this.props.habit;
-
+        // const { count } = this.props;
+        console.log(`habit: ${name}`);
         return (
             <li className='habit'>
                 <span className='habit-name'>{name}</span>
