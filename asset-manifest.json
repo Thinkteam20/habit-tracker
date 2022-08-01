@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/thinkteam20.github.io/static/css/main.7bd798e3.css",
-    "main.js": "/thinkteam20.github.io/static/js/main.f2fe009c.js",
-    "index.html": "/thinkteam20.github.io/index.html",
-    "main.7bd798e3.css.map": "/thinkteam20.github.io/static/css/main.7bd798e3.css.map",
-    "main.f2fe009c.js.map": "/thinkteam20.github.io/static/js/main.f2fe009c.js.map"
+    "main.css": "/habit-tracker/static/css/main.7bd798e3.css",
+    "main.js": "/habit-tracker/static/js/main.f2fe009c.js",
+    "index.html": "/habit-tracker/index.html",
+    "main.7bd798e3.css.map": "/habit-tracker/static/css/main.7bd798e3.css.map",
+    "main.f2fe009c.js.map": "/habit-tracker/static/js/main.f2fe009c.js.map"
   },
   "entrypoints": [
     "static/css/main.7bd798e3.css",
