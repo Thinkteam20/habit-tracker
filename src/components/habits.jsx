@@ -20,9 +20,9 @@ export default class Habits extends Component {
     };
 
     render() {
-        console.log("habits");
+        // console.log("habits");
         return (
-            <>
+            <div className='habits'>
                 <Input onAdd={this.handleAdd} />
                 <ul>
                     {this.props.habits.map((habit) => (
@@ -39,7 +39,7 @@ export default class Habits extends Component {
                 <button className='reset-button' onClick={this.props.onReset}>
                     Reset All
                 </button>
-            </>
+            </div>
         );
     }
 }

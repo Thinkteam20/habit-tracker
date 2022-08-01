@@ -1,10 +1,14 @@
 import React, { PureComponent } from "react";
 
 export default class Habit extends PureComponent {
-    // ** 부모로부터 받은 state를 보여주기만하는 클라스 컴포넌트!*****
+    componentDidMount() {
+        console.log(`habit: ${this.props.habit.name} mount`);
+    }
+    componentWillUnmount() {
+        console.log(`habit: ${this.props.habit.name} will unmount`);
+    }
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
-        // this.props.habit = 각각의 해당하는 habit들이 인자로 보내준다!
     };
     handleDecrement = () => {
         this.props.onDecrement(this.props.habit);
@@ -16,8 +20,8 @@ export default class Habit extends PureComponent {
 
     render() {
         const { name, count } = this.props.habit;
-        // const { count } = this.props;
-        console.log(`habit: ${name}`);
+
+        // console.log(`habit: ${name}`);
         return (
             <li className='habit'>
                 <span className='habit-name'>{name}</span>
